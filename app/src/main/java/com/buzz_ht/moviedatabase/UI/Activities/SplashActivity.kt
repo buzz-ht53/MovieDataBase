@@ -1,4 +1,4 @@
-package com.buzz_ht.moviedatabase.UI
+package com.buzz_ht.moviedatabase.UI.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

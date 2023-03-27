@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1008154228887",
+    "project_id": "moviedatabase-dd0bc",
+    "storage_bucket": "moviedatabase-dd0bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008154228887:android:8b7c8ecc26317dd50951d2",
+        "android_client_info": {
+          "package_name": "com.buzz_ht.moviedatabase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1008154228887-qldk3o0vh763uus2c9tpmjtrj8i23qh4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAivrpCwlonuWuBPRPcJWe8oeZx5mSh9KA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1008154228887-qldk3o0vh763uus2c9tpmjtrj8i23qh4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

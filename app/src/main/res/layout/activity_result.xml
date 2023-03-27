@@ -3,7 +3,92 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".UI.ResultActivity">
+    android:layout_height="wrap_content"
+    tools:context=".UI.Activities.ResultActivity">
+
+    <ImageView
+        android:id="@+id/imgMoviePoster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+
+    <TextView
+        android:id="@+id/txtMovieTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movie Title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgMoviePoster" />
+
+    <TextView
+        android:id="@+id/txtMovieYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movie Year"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMovieTitle" />
+
+    <TextView
+        android:id="@+id/txtMovieRated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movie Rated"
+        app:layout_constraintStart_toEndOf="@+id/txtMovieYear"
+        app:layout_constraintTop_toTopOf="@+id/txtMovieYear" />
+
+    <TextView
+        android:id="@+id/txtMovieReleased"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movie Released"
+        app:layout_constraintStart_toEndOf="@+id/txtMovieRated"
+        app:layout_constraintTop_toTopOf="@+id/txtMovieYear" />
+
+
+    <TextView
+        android:id="@+id/txtMovieDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movie Duration"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMovieYear" />
+
+    <TextView
+        android:id="@+id/txtMovieGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movie Genre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMovieDuration" />
+
+    <TextView
+        android:id="@+id/txtMoviePlot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movie Plot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMovieGenre" />
+
+
+    <TextView
+        android:id="@+id/txtMovieDirector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movie Director"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMoviePlot" />
+
+    <TextView
+        android:id="@+id/txtMovieWriter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movie Writer"
+        app:layout_constraintStart_toEndOf="@+id/txtMovieDirector"
+        app:layout_constraintTop_toBottomOf="@+id/txtMoviePlot" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
