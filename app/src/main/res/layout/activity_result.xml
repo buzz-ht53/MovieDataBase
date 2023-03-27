@@ -3,14 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".UI.Activities.ResultActivity">
 
     <ImageView
         android:id="@+id/imgMoviePoster"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
@@ -21,15 +23,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Movie Title"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgMoviePoster" />
+        style="@style/titleText"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/imgMoviePoster"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtMovieYear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Movie Year"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/txtMovieTitle"
         app:layout_constraintTop_toBottomOf="@+id/txtMovieTitle" />
 
     <TextView
@@ -37,6 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Movie Rated"
+        android:layout_marginLeft="5dp"
         app:layout_constraintStart_toEndOf="@+id/txtMovieYear"
         app:layout_constraintTop_toTopOf="@+id/txtMovieYear" />
 
@@ -44,6 +51,7 @@
         android:id="@+id/txtMovieReleased"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
         android:text="Movie Released"
         app:layout_constraintStart_toEndOf="@+id/txtMovieRated"
         app:layout_constraintTop_toTopOf="@+id/txtMovieYear" />
@@ -54,7 +62,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Movie Duration"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/txtMovieYear"
         app:layout_constraintTop_toBottomOf="@+id/txtMovieYear" />
 
     <TextView
@@ -63,7 +72,7 @@
         android:layout_height="wrap_content"
         android:text="Movie Genre"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtMovieDuration" />
+        app:layout_constraintTop_toBottomOf="@+id/imgMoviePoster" />
 
     <TextView
         android:id="@+id/txtMoviePlot"
@@ -89,6 +98,26 @@
         android:text="Movie Writer"
         app:layout_constraintStart_toEndOf="@+id/txtMovieDirector"
         app:layout_constraintTop_toBottomOf="@+id/txtMoviePlot" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Watch Now"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMovieWriter" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Add to Watchlist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

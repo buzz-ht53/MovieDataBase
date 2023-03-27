@@ -1,36 +1,38 @@
-package com.buzz_ht.moviedatabase.UI
+package com.buzz_ht.moviedatabase.UI.Model
 
 import com.google.gson.annotations.SerializedName
 import org.json.JSONObject
 import java.io.Serializable
 
 
+
 data class MovieModel(
 
-    @SerializedName("Title") var Title: String? = null,
-    @SerializedName("Year") var Year: String? = null,
-    @SerializedName("Rated") var Rated: String? = null,
-    @SerializedName("Released") var Released: String? = null,
-    @SerializedName("Runtime") var Runtime: String? = null,
-    @SerializedName("Genre") var Genre: String? = null,
-    @SerializedName("Director") var Director: String? = null,
-    @SerializedName("Writer") var Writer: String? = null,
-    @SerializedName("Actors") var Actors: String? = null,
-    @SerializedName("Plot") var Plot: String? = null,
-    @SerializedName("Language") var Language: String? = null,
-    @SerializedName("Country") var Country: String? = null,
-    @SerializedName("Awards") var Awards: String? = null,
-    @SerializedName("Poster") var Poster: String? = null,
-    @SerializedName("Ratings") var Ratings: ArrayList<JSONObject> = arrayListOf(),
-    @SerializedName("Metascore") var Metascore: String? = null,
-    @SerializedName("imdbRating") var imdbRating: String? = null,
-    @SerializedName("imdbVotes") var imdbVotes: String? = null,
-    @SerializedName("imdbID") var imdbID: String? = null,
-    @SerializedName("Type") var Type: String? = null,
-    @SerializedName("DVD") var DVD: String? = null,
-    @SerializedName("BoxOffice") var BoxOffice: String? = null,
-    @SerializedName("Production") var Production: String? = null,
-    @SerializedName("Website") var Website: String? = null,
-    @SerializedName("Response") var Response: String? = null
+
+    var Title: String? = null,
+    var Year: String? = null,
+    var Rated: String? = null,
+    var Released: String? = null,
+    var Runtime: String? = null,
+    var Genre: String? = null,
+    var Director: String? = null,
+    var Writer: String? = null,
+    var Actors: String? = null,
+    var Plot: String? = null,
+    var Language: String? = null,
+    var Country: String? = null,
+    var Awards: String? = null,
+    var Poster: String? = null,
+    //  var Ratings: ArrayList<JSONObject> = arrayListOf(),\
+    var Metascore: String? = null,
+    var imdbRating: String? = null,
+    var imdbVotes: String? = null,
+    var imdbID: String? = null,
+    var Type: String? = null,
+    var DVD: String? = null,
+    var BoxOffice: String? = null,
+    var Production: String? = null,
+    var Website: String? = null,
+    var Response: String? = null
 
 ) : Serializable

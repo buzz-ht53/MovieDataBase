@@ -12,13 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieDataBase">
         <activity
-            android:name=".UI.AboutActivity"
+            android:name=".UI.Activities.AboutActivity"
             android:exported="false" />
         <activity
-            android:name=".UI.ResultActivity"
+            android:name=".UI.Activities.ResultActivity"
             android:exported="false" />
         <activity
-            android:name=".UI.LoginActivity"
+            android:name=".UI.Activities.LoginActivity"
             android:exported="true" />
         <!--    <intent-filter>
               &lt;!&ndash;  <action android:name="android.intent.action.MAIN" />
@@ -27,15 +27,15 @@
             </intent-filter>&ndash;&gt;
        </activity>-->
         <activity
-            android:name=".UI.SplashActivity"
+            android:name=".UI.Activities.SplashActivity"
             android:exported="false" />
         <activity
-            android:name=".UI.MainActivity"
+            android:name=".UI.Activities.MainActivity"
             android:exported="true">
 
         </activity>
         <activity
-            android:name=".UI.SearchActivity"
+            android:name=".UI.Activities.SearchActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

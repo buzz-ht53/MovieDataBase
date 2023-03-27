@@ -1,7 +1,6 @@
 package com.buzz_ht.moviedatabase.UI.Retrofit
 
-import com.buzz_ht.moviedatabase.UI.MovieModel
-import retrofit2.Call
+import com.buzz_ht.moviedatabase.UI.Model.MovieModel
 import retrofit2.Response
 import retrofit2.http.*
 
