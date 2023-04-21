@@ -9,4 +9,20 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="movie_year">Movie Year</string>
+    <string name="movie_rated">Movie Rated</string>
+    <string name="movie_released">Movie Released</string>
+    <string name="imdb_rating">IMDB Rating</string>
+    <string name="movie_duration">Movie Duration</string>
+    <string name="movie_genre">Movie Genre</string>
+    <string name="movie_plot">Movie Plot</string>
+    <string name="movie_director">Movie Director</string>
+    <string name="movie_writer">Movie Writer</string>
+    <string name="watch_now">Watch Now</string>
+    <string name="watchlist">Add to Watchlist</string>
+    <string name="sharedPref">com.buzz_ht.moviedatabase</string>
+    <string name="Added">Added</string>
+
+
 </resources>

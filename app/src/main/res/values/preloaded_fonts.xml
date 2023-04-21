@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/andika_new_basic</item>
+        <item>@font/bangers</item>
+        <item>@font/doppio_one</item>
+        <item>@font/mali_light</item>
+    </array>
+</resources>

@@ -13,13 +13,16 @@
         android:theme="@style/Theme.MovieDataBase">
         <activity
             android:name=".UI.Activities.AboutActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".UI.Activities.ResultActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".UI.Activities.LoginActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <!--    <intent-filter>
               &lt;!&ndash;  <action android:name="android.intent.action.MAIN" />
 
@@ -28,21 +31,29 @@
        </activity>-->
         <activity
             android:name=".UI.Activities.SplashActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".UI.Activities.MainActivity"
-            android:exported="true">
+            android:exported="true"
+
+            android:screenOrientation="portrait">
 
         </activity>
         <activity
             android:name=".UI.Activities.SearchActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
