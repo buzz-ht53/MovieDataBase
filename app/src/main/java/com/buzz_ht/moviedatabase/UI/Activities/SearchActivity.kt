@@ -20,6 +20,9 @@ import com.buzz_ht.moviedatabase.UI.Retrofit.RetrofitAPI
 import com.buzz_ht.moviedatabase.UI.Retrofit.RetrofitClient
 import com.buzz_ht.moviedatabase.UI.Utils.Constant
 import com.buzz_ht.moviedatabase.UI.Utils.GeneralUtils
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.analytics.ktx.analytics
+import com.google.firebase.ktx.Firebase
 import com.google.gson.Gson
 import kotlinx.coroutines.*
 import retrofit2.Response
@@ -36,11 +39,14 @@ class SearchActivity : AppCompatActivity(), Serializable {
     private val TAG = "SearchActLogs"
     lateinit var lottieWait: LottieAnimationView
     lateinit var progressBar: ProgressBar
+    private lateinit var firebaseAnalytics: FirebaseAnalytics
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
 
+        // Obtain the FirebaseAnalytics instance.
+        firebaseAnalytics = FirebaseAnalytics.getInstance(this)
         drawBehindStatusBar()
         hideActionBar()
         viewSetup()
@@ -88,6 +94,8 @@ class SearchActivity : AppCompatActivity(), Serializable {
                 // lottieWait.visibility= View.VISIBLE
                 // progressBar.visibility=View.VISIBLE
 
+                logFirebaseEvent("Search Button", edtMovieName.text.toString())
+
                 Handler().postDelayed({
                     callSearchAPI(edtMovieName.text.toString())
                 }, 100)
@@ -104,6 +112,16 @@ class SearchActivity : AppCompatActivity(), Serializable {
 
         //    lottieWait=findViewById(R.id.lottieWait)
         progressBar = findViewById(R.id.progressBar)
+    }
+
+    private fun logFirebaseEvent(item_id: String, item_name: String) {
+
+        val bundle = Bundle()
+        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, item_id)
+        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, item_name)
+
+        firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle)
+
     }
 
     private fun callSearchAPI(movieName: String) {
@@ -140,6 +158,8 @@ class SearchActivity : AppCompatActivity(), Serializable {
             if (resultMain.Response.equals("True")) {
 
                 Log.d(TAG, "inside-intent")
+                logFirebaseEvent("Result Found", resultMain.imdbRating.toString())
+
 
                 val intent = Intent(applicationContext, ResultActivity::class.java)
                 val b = Bundle()

@@ -22,13 +22,13 @@
         <activity
             android:name=".UI.Activities.LoginActivity"
             android:exported="true"
-            android:screenOrientation="portrait" />
-        <!--    <intent-filter>
-              &lt;!&ndash;  <action android:name="android.intent.action.MAIN" />
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>&ndash;&gt;
-       </activity>-->
+            </intent-filter>
+        </activity>
         <activity
             android:name=".UI.Activities.SplashActivity"
             android:exported="false"
@@ -44,11 +44,11 @@
             android:name=".UI.Activities.SearchActivity"
             android:exported="true"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!-- <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>-->
         </activity>
 
         <meta-data

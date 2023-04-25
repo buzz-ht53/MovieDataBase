@@ -6,9 +6,11 @@ import android.util.DisplayMetrics
 import android.view.Display
 import android.view.WindowManager
 import android.widget.Toast
+import com.google.firebase.analytics.FirebaseAnalytics
 
 
 public class GeneralUtils {
+
 
     companion object {
         public fun showToastLong(context: Context, message: String) {
@@ -37,6 +39,8 @@ public class GeneralUtils {
 
 
         }
+
+
     }
 
 

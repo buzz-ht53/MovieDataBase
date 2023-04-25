@@ -9,8 +9,6 @@ import com.buzz_ht.moviedatabase.UI.Utils.GeneralUtils
 import com.buzz_ht.moviedatabase.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
 
@@ -27,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(view)
 
         //Firebase
-        auth = Firebase.auth
+        auth = FirebaseAuth.getInstance()
 
         //View related
         binding.editTextNumber.hint = "Enter your Email/Phone Number"
@@ -78,18 +76,45 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
+    private fun performEmailSignUpWithFirebase(phoneNumber: String, password: String) {
+
+        Log.d("FirebaseLogin", "Email: " + phoneNumber + " Password: " + password)
+
+
+        auth.createUserWithEmailAndPassword(phoneNumber, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Sign in success, update UI with the signed-in user's information
+                    Log.d("FirebaseLogin", "signInWithEmail:success")
+                    val user = auth.currentUser
+                    updateUI(user)
+                } else {
+                    // If sign in fails, display a message to the user.
+
+                    Toast.makeText(
+                        baseContext, "Authentication failed.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    updateUI(null)
+                }
+            }
+    }
+
+
     private fun performEmailSignInWithFirebase(phoneNumber: String, password: String) {
+
+        Log.d("FirebaseLogin", "Email: " + phoneNumber + " Password: " + password)
 
         auth.signInWithEmailAndPassword(phoneNumber, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
-                    Log.d(TAG, "signInWithEmail:success")
+                    Log.d("FirebaseLogin", "signInWithEmail:success")
                     val user = auth.currentUser
                     updateUI(user)
                 } else {
                     // If sign in fails, display a message to the user.
-                    Log.w(TAG, "signInWithEmail:failure", task.exception)
+
                     Toast.makeText(
                         baseContext, "Authentication failed.",
                         Toast.LENGTH_SHORT
