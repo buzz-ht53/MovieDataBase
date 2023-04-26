@@ -60,7 +60,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun setUpViews() {
         binding.editTextNumber.hint = "Enter your Email/Phone Number"
-        binding.editTextNumberPassword.hint = "Enter your 4 digit Password"
+        binding.editTextNumberPassword.hint = "Enter your 6 digit Password"
         binding.button.setOnClickListener {
             buttonClick()
         }
